@@ -1,0 +1,17 @@
+{
+    "name": "davidvandertuijn/iban",
+    "description": "International Bank Account Number (IBAN) Validator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David van der Tuijn",
+            "email": "david@floro.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Davidvandertuijn\\": "src/"
+        },
+    }
+}
