@@ -4,13 +4,13 @@
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/license.svg" alt="License"></a>
 
-### Install
+## Install
 
 ```
 composer require davidvandertuijn/iban
 ```
 
-### Usage
+## Usage
 
 ```php
 use Davidvandertuijn\Iban;
