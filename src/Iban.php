@@ -4,6 +4,9 @@ namespace Davidvandertuijn;
 
 class Iban
 {
+    /**
+     * @var array
+     */
     protected static $aLengths = [
         'AL' => 28, 'AD' => 24, 'AT' => 20, 'AZ' => 28, 'BH' => 22, 'BY' => 28, 'BE' => 16, 'BA' => 20,
         'BR' => 29, 'BG' => 22, 'CR' => 22, 'HR' => 21, 'CY' => 28, 'CZ' => 24, 'DK' => 18, 'DO' => 28,
@@ -24,7 +27,7 @@ class Iban
      *
      * @return string
      */
-    public static function toHumanFriendly($sIban)
+    public static function toHumanFriendly(string $sIban): string
     {
         return trim(chunk_split($sIban, 4, ' '));
     }
@@ -36,7 +39,7 @@ class Iban
      *
      * @return bool
      */
-    public static function validate($sIban)
+    public static function validate(string $sIban): bool
     {
         $iCountryCode = substr($sIban, 0, 2);
 
