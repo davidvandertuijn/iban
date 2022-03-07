@@ -3,7 +3,6 @@
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/license.svg" alt="License"></a>
-<img src="https://github.styleci.io/repos/92872187/shield?style=flat" alt="StyleCI">
 
 ## Install
 
