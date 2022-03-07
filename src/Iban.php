@@ -2,12 +2,15 @@
 
 namespace Davidvandertuijn;
 
+/**
+ * International Bank Account Number (IBAN).
+ */
 class Iban
 {
     /**
      * @var array
      */
-    protected static $aLengths = [
+    protected static $lengths = [
         'AL' => 28, 'AD' => 24, 'AT' => 20, 'AZ' => 28, 'BH' => 22, 'BY' => 28, 'BE' => 16, 'BA' => 20,
         'BR' => 29, 'BG' => 22, 'CR' => 22, 'HR' => 21, 'CY' => 28, 'CZ' => 24, 'DK' => 18, 'DO' => 28,
         'SV' => 28, 'EE' => 20, 'FO' => 18, 'FI' => 18, 'FR' => 27, 'GE' => 22, 'DE' => 22, 'GI' => 23,
@@ -23,49 +26,49 @@ class Iban
     /**
      * To Human Friendly.
      *
-     * @param string $sIban
+     * @param string $iban
      *
      * @return string
      */
-    public static function toHumanFriendly(string $sIban): string
+    public static function toHumanFriendly(string $iban): string
     {
-        return trim(chunk_split($sIban, 4, ' '));
+        return trim(chunk_split($iban, 4, ' '));
     }
 
     /**
      * Validate.
      *
-     * @param string $sIban
+     * @param string $iban
      *
      * @return bool
      */
-    public static function validate(string $sIban): bool
+    public static function validate(string $iban): bool
     {
-        $iCountryCode = substr($sIban, 0, 2);
+        $countryCode = substr($iban, 0, 2);
 
-        if (!array_key_exists($iCountryCode, self::$aLengths)) {
+        if (!array_key_exists($countryCode, self::$lengths)) {
             return false;
         }
 
-        if (strlen($sIban) != self::$aLengths[$iCountryCode]) {
+        if (strlen($iban) != self::$lengths[$countryCode]) {
             return false;
         }
 
-        $aFind = [
+        $find = [
             'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         ];
 
-        $aReplace = [
+        $replace = [
             '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36',
         ];
 
-        $sChecksum = substr($sIban, 4).substr($sIban, 0, 4);
+        $checksum = substr($iban, 4).substr($iban, 0, 4);
 
-        $sNumber = str_replace($aFind, $aReplace, $sChecksum);
+        $number = str_replace($find, $replace, $checksum);
 
-        $iRemainder = bcmod($sNumber, '97');
+        $remainder = bcmod($number, '97');
 
-        if ($iRemainder != 1) {
+        if ($remainder != 1) {
             return false;
         }
 
