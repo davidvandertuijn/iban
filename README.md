@@ -4,6 +4,8 @@
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/iban"><img src="https://poser.pugx.org/davidvandertuijn/iban/license.svg" alt="License"></a>
 
+![International Bank Account Number (IBAN) Validator](https://cdn.davidvandertuijn.nl/github/iban.png)
+
 ## Install
 
 ```
