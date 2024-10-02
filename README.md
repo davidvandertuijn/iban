@@ -12,7 +12,7 @@ The International Bank Account Number (IBAN) Validator is an essential tool desi
 
 ## Install
 
-```
+```shell
 composer require davidvandertuijn/iban
 ```
 
