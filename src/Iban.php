@@ -25,10 +25,6 @@ class Iban
 
     /**
      * To Human Friendly.
-     *
-     * @param string $iban
-     *
-     * @return string
      */
     public static function toHumanFriendly(string $iban): string
     {
@@ -37,10 +33,6 @@ class Iban
 
     /**
      * Validate.
-     *
-     * @param string $iban
-     *
-     * @return bool
      */
     public static function validate(string $iban): bool
     {
